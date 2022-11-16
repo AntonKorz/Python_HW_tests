@@ -1,4 +1,5 @@
 from morse import MORSE_TO_LETTER
+import pytest
 
 
 def decode(morse_message: str) -> str:
@@ -12,14 +13,10 @@ def decode(morse_message: str) -> str:
     return ''.join(decoded_letters)
 
 
-if __name__ == "__main__":
-    import pytest
-
-
-    @pytest.mark.parametrize('s, exp', [
-        ('.-', 'A'),
-        ('... --- ...', 'SOS'),
-        ('.- .- .- .- .- .- .- .- .- .- .- .- .- .-', 'AAAAAAAAAAAAAA')
-    ])
-    def test_decode(s, exp):
-        assert decode(s) == exp
+@pytest.mark.parametrize('s, exp', [
+    ('.-', 'A'),
+    ('... --- ...', 'SOS'),
+    ('.- .- .- .- .- .- .- .- .- .- .- .- .- .-', 'AAAAAAAAAAAAAA')
+])
+def test_decode(s, exp):
+    assert decode(s) == exp
