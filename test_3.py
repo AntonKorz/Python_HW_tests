@@ -52,6 +52,10 @@ class TestTF(unittest.TestCase):
         expected = []
         self.assertEqual(actual, expected)
 
+    def test_not_in(self):
+        actual = fit_transform(['Anton', 'Ivan', 'Korznikov'])
+        expected = ('Ivan', [0, 1, 0])
+        self.assertNotIn(actual, expected)
 
 if __name__ == '__main__':
     unittest.main()
