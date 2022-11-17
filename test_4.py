@@ -36,5 +36,5 @@ def test_fit_transform(s, exp):
     assert fit_transform(s) == exp
 
 
-# print(fit_transform(['A', 'B', 'C', 'D', 'A']))
+print(fit_transform([]))
 
