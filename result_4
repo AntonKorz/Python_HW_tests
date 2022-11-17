@@ -1,0 +1,11 @@
+(Python_HW_tests) C:\Users\User\PycharmProjects\Python_HW_tests> python -m pytest
+================================================================== test session starts ===================================================================
+platform win32 -- Python 3.9.2, pytest-7.2.0, pluggy-1.0.0
+rootdir: C:\Users\User\PycharmProjects\Python_HW_tests
+collected 7 items                                                                                                                                         
+
+test_2.py ...                                                                                                                                       [ 42%]
+test_4.py ....                                                                                                                                      [100%]
+
+=================================================================== 7 passed in 0.05s ====================================================================
+
